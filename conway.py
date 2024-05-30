@@ -15,5 +15,5 @@ for x in range(WIDTH):
     nextCells.append(collumn) # val(nextCells) - содержыт список столбцов
 # Основной цыкл игры.
 while True:
-    print('/n, /n, /n, /n, /n') # Отделение каждого шага клетки.
+    print('/n, /n, /n, /n, /n') # Отделение каждого шага клетки в игре.
 currentCells = copy.deepcopy(nextCells)
