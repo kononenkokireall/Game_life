@@ -9,8 +9,9 @@ for x in range(WIDTH):
     collumn = []
     for y in range(HEIGHT):
         if random.randint(0, 1) == 0:
-            collumn.append('#') # добавляется мертвая клетка
+            collumn.append('#') # добавляется Живая клетка
         else:
-            collumn.append('') # добавляется живая клетка
-    nextCells.append(collumn)
+            collumn.append('') # добавляется Мертвая клетка
+    nextCells.append(collumn) # val(nextCells) - содержыт кол. столбцов
+    
     
