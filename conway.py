@@ -12,6 +12,8 @@ for x in range(WIDTH):
             collumn.append('#') # добавляется Живая клетка
         else:
             collumn.append('') # добавляется Мертвая клетка
-    nextCells.append(collumn) # val(nextCells) - содержыт кол. столбцов
-    
-    
+    nextCells.append(collumn) # val(nextCells) - содержыт список столбцов
+# Основной цыкл игры.
+while True:
+    print('/n, /n, /n, /n, /n') # Отделение каждого шага клетки.
+currentCells = copy.deepcopy(nextCells)
