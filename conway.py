@@ -31,3 +31,30 @@ while True:
                 right_cords = (x + 1) % WIDTH
                 above_cords = (y - 1) % HEIGHT
                 belou_cords = (y + 1) % HEIGHT
+                # Вычисление количества живых соседних клеток.
+                NUM_NEIGHBORS = 0
+                if currentCells[left_cords][above_cords] == '#':
+                    NUM_NEIGHBORS += 1
+                    # жива соседняя клетка с верху, слева
+                if currentCells[x][above_cords] == '#':
+                    NUM_NEIGHBORS += 1
+                    # жива соседняя клетка с верху
+                if currentCells[right_cords][above_cords] == '#':
+                    NUM_NEIGHBORS += 1
+                    # жива соседняя клетка с верху, с права
+                if currentCells[left_cords][y] == '#':
+                    NUM_NEIGHBORS += 1
+                    # жива соседняя клетка слева
+                if currentCells[right_cords][y] == '#':
+                    NUM_NEIGHBORS += 1
+                    # жива соседняя клетка с права
+                if currentCells[left_cords][belou_cords] == '#':
+                    NUM_NEIGHBORS += 1
+                    # жива соседняя клетка слева снизу
+                if currentCells[x][belou_cords] == '#':
+                    NUM_NEIGHBORS += 1
+                    # жива соседняя клетка снизу
+                if currentCells[right_cords][belou_cords] == '#':
+                    NUM_NEIGHBORS += 1
+                    # жива соседняя клетка с права снизу
+                
