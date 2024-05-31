@@ -16,4 +16,18 @@ for x in range(WIDTH):
 # Основной цыкл игры.
 while True:
     print('/n, /n, /n, /n, /n') # Отделение каждого шага клетки в игре.
-currentCells = copy.deepcopy(nextCells)
+    currentCells = copy.deepcopy(nextCells)
+    for x in range(HEIGHT):
+        for y in range(WIDTH):
+            print(currentCells[x],[y], end='') # Вывод решетки.
+        print() # Вывод символа новой строки в конце.
+        # Вычисление клеток следующего шага
+        # на основе текущего шага.
+        for x in range(WIDTH):
+            for y in range(HEIGHT):
+                # Выражение '% WIDTH’ гарантирует, что значение
+                # leftCoord всегда находится между 0 и WIDTH - 1
+                left_cords = (x - 1) % WIDTH
+                right_cords = (x + 1) % WIDTH
+                above_cords = (y - 1) % HEIGHT
+                belou_cords = (y + 1) % HEIGHT
