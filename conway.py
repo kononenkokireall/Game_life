@@ -57,4 +57,16 @@ while True:
                 if currentCells[right_cords][belou_cords] == '#':
                     NUM_NEIGHBORS += 1
                     # жива соседняя клетка с права снизу
-                
+                # Изменение клетки на основе правел игры.
+                if currentCells[x][y] == '#' and (NUM_NEIGHBORS == 2 
+                                                  or NUM_NEIGHBORS == 3):
+                    # Живые клетки с тремя или двумя соседними остаются живыми.
+                    nextCells[x][y] == '#'
+                elif currentCells[x][y] == '' and NUM_NEIGHBORS == 3:
+                    # Мертвые 3 клетки с 3 живыми оживают
+                    nextCells[x][y] == '#'
+                else:
+                    # Все остальные клетки умирают или остаются мертвыми
+                    nextCells[x][y] == ''
+        time.sleep(1)
+            
